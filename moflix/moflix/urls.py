@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from moflix.series.views import HelloWorld
+from series.views import HelloWorld
 
 urlpatterns = [
     path('admin/', admin.site.urls),
