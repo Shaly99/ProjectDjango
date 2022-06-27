@@ -10,4 +10,4 @@ class Serie(models.Model):
 class Episode(models.Model):
     number = models.IntegerField()
     name = models.CharField(max_length=50)
-    serie = models.ForeignKey(Serie, on_delete=CASCADE)
+    serie = models.ForeignKey(Serie, on_delete=models.CASCADE)
