@@ -7,10 +7,12 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from django.views import View
 
+from series.models import Serie
+
 # Create your views here.
-class HelloWorld(View):
+class SerieView(View):
     def get(self, request):
         context= {
-            'items': list(range(10))
+            'series': list(Serie.objects.all)
         }
-        return render(request, 'index.html', context=context)
+        return render(request, 'series.html', context=context)
